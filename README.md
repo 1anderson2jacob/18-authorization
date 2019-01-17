@@ -1,14 +1,14 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
+## Authorization
 
-### Author: Student/Group Name
+### Author: Jacob Anderson
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
+* [repo](https://github.com/1anderson2jacob/18-authorization)
+* [travis](https://travis-ci.com/1anderson2jacob/18-authorization)
+* [back-end](https://authorization-jake.herokuapp.com/) (when applicable)
 * [front-end](http://xyz.com) (when applicable)
 
 #### Documentation

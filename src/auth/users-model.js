@@ -45,6 +45,17 @@ users.statics.createFromOauth = function(email) {
 
 };
 
+users.statics.authenticateToken = function(token) {
+  if(usedTokens.has(token)) {
+    throw 'Resource Not Available';
+  } else {
+    usedTokens.add(token);
+    let parsedToken = jwt.verify(token, SECRET);
+    let query = {_id:parsedToken.id};
+    return this.findOne(query);    
+  }
+};
+
 users.statics.authenticateBasic = function(auth) {
   let query = {username:auth.username};
   return this.findOne(query)
@@ -62,10 +73,13 @@ users.methods.generateToken = function(type) {
   let token = {
     id: this._id,
     role: this.role,
+    //sessionId: id,
     type: type || 'user',
   };
   
-  return jwt.sign(token, SECRET);
+  return jwt.sign(token, SECRET, {
+    expiresIn: '1d',
+  }); // put expiration here?
 };
 
 users.methods.generateKey = function() {
