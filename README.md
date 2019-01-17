@@ -3,7 +3,7 @@
 
 ## Project Name
 
-### Author: Student/Group Name
+### Author: Jacob Anderson
 
 ### Links and Resources
 * [repo](http://xyz.com)
